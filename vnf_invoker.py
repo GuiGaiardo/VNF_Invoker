@@ -19,6 +19,9 @@ Usage:
 import subprocess
 
 
+global cosmos_path
+
+
 def print_help():
 	print("Usage:")
 	print("    Type a valid option:")
@@ -30,6 +33,7 @@ def print_help():
 
 
 def get_cosmos_path():
+	global cosmos_path
 	cosmos_path = input("\n\nInsert the Cosmos executable absolute path.\n")
 
 
@@ -92,6 +96,6 @@ cosmos_path = ""
 
 """If treat_command() returns 0, then its 'exit' or error"""
 while True:
-	command = input("\n\nType 'help' if you dont know what to do or exit to leave.\n")
+	command = input("\n\nType 'help' if you dont know what to do or 'exit' to leave.\n")
 	if not treat_command(command):
 		break
